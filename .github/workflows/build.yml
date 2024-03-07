@@ -77,6 +77,6 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          push: ${{ env.SECRET != 0 }}
+          push: true
           platforms: linux/amd64
-          tags: common/swarmpit-prebuild:main
+          tags: registry.gitlab.tapentertainment.com/common/swarmpit-prebuild:main
