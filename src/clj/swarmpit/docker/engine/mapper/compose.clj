@@ -72,8 +72,8 @@
                              {:interval (str (:interval healthcheck) "s")}
                              {:timeout (str (:timeout healthcheck) "s")})))
      :tty (-> service :tty)
-     :cap_add
-     :cap_drop
+     :cap_add (-> service :cap_add)
+     :cap_drop (-> service :cap_drop)
      :environment (-> service :variables (name-value->sorted-map))
      :ports (->> service :ports
                  (map #(str (:hostPort %) ":" (:containerPort %) (when (= "udp" (:protocol %)) "/udp"))))
