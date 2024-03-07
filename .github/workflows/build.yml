@@ -52,7 +52,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: clojure
     env:
-      SECRET: ${{ secrets.PKG_USER }}
+      SECRET: ${{ secrets.GITLAB_USERNAME }}
       PR: ${{ github.event.pull_request.number }}
     steps:
       - name: checkout
@@ -78,5 +78,5 @@ jobs:
         with:
           context: .
           push: ${{ env.SECRET != 0 }}
-          platforms: linux/amd64,linux/arm64/v8,linux/arm/v7,linux/arm/v5
+          platforms: linux/amd64
           tags: common/swarmpit-prebuild:main
