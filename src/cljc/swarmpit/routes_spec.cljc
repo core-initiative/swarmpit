@@ -181,6 +181,8 @@
    :user            string?
    :dir             string?
    :tty             boolean?
+   :cap_add         [name-value]
+   :cap_drop        [name-value]
    :healthcheck     {:test     [string?]
                      :interval number?
                      :timeout  number?
@@ -279,7 +281,9 @@
    (ds/opt :links)           [name-value]
    (ds/opt :user)            string?
    (ds/opt :dir)             string?
-   (ds/opt :tty)             boolean?
+   (ds/opt :tty)             boolean
+   :cap_add                  [name-value]
+   :cap_drop                 [name-value]
    (ds/opt :healthcheck)     {:test     [string?]
                               :interval number?
                               :timeout  number?

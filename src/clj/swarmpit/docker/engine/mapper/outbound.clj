@@ -247,6 +247,8 @@
                                     :Configs     (:configs service)
                                     :Args        (:command service)
                                     :TTY         (:tty service)
+                                    :Cap_add     (:cap_add service)
+                                    :Cap_drop    (:cap_drop service)
                                     :Healthcheck (->service-healthcheck (:healthcheck service))
                                     :Env         (->service-variables service)
                                     :Hosts       (->service-hosts service)}
