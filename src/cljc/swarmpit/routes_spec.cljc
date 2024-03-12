@@ -181,8 +181,8 @@
    :user            string?
    :dir             string?
    :tty             boolean?
-   :cap_add         string?
-   :cap_drop        string?
+   :cap_add         [string?]
+   :cap_drop        [string?]
    :healthcheck     {:test     [string?]
                      :interval number?
                      :timeout  number?
@@ -282,8 +282,8 @@
    (ds/opt :user)            string?
    (ds/opt :dir)             string?
    (ds/opt :tty)             boolean
-   (ds/opt :cap_add)         string?
-   (ds/opt :cap_drop)        string?
+   (ds/opt :cap_add)         [string?]
+   (ds/opt :cap_drop)        [string?]
    (ds/opt :healthcheck)     {:test     [string?]
                               :interval number?
                               :timeout  number?
