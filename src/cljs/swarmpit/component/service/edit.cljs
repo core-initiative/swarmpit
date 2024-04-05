@@ -48,6 +48,8 @@
    :agent
    :command
    :tty
+   :cap_add
+   :cap_drop
    :user
    :dir
    :healthcheck

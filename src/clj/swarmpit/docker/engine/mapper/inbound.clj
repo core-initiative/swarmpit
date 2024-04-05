@@ -436,6 +436,8 @@
        :user (get-in service-task-template [:ContainerSpec :User])
        :dir (get-in service-task-template [:ContainerSpec :Dir])
        :tty (get-in service-task-template [:ContainerSpec :TTY])
+       :cap_add (get-in service-task-template [:ContainerSpec :CapabilityAdd])
+       :cap_drop (get-in service-task-template [:ContainerSpec :CapabilityDrop])
        :healthcheck (->service-healthcheck healthcheck)
        :logdriver {:name (->service-log-driver service-task-template info)
                    :opts (->service-log-options service-task-template)}

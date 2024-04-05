@@ -1,4 +1,4 @@
-version=${DOCKER_VERSION:-"19.03.5"}
+version=${DOCKER_VERSION:-"24.0.9"}
 case $(uname -m) in
     armv6*)  arch=armhf ;;
     armv7*)  arch=armhf ;;
