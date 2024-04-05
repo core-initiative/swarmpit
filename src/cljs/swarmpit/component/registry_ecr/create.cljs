@@ -32,6 +32,8 @@
    "ap-northeast-3"
    "ap-northeast-2"
    "ap-northeast-1"
+   "ap-southeast-4"
+   "ap-southeast-3"
    "ap-southeast-2"
    "ap-southeast-1"
    "ap-east-1"
